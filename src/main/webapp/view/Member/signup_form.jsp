@@ -12,9 +12,9 @@
 <body>
 	
 		
-	<jsp:include page="./view/include/header.jsp">
+	<jsp:include page="../include/header.jsp">
 	
-	<jsp:include page="./view/include/nav.jsp">
+	<jsp:include page="../include/nav.jsp">
 	
 	
 	
@@ -24,7 +24,7 @@
 		</div>
 	</article>
 	
-    <jsp:include page="./view/include/footer.jsp">
+    <jsp:include page="../include/footer.jsp">
 	
 	
 	

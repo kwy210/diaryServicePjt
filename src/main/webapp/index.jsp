@@ -4,30 +4,24 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<jsp:include page="./view/include/title.jsp">
+<jsp:include page="./view/include/title.jsp" />
 
 <link href="./res/css/index.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
-	
-		
-	<jsp:include page="./view/include/header.jsp">
-	
-	<jsp:include page="./view/include/nav.jsp">
-	
-	
+
+	<jsp:include page="./view/include/header.jsp" />
+
+	<jsp:include page="./view/include/nav.jsp" />
 	
 	<article>
-		<div class = "article_wrap">
-		    This Page is Home.
+		<div class="article_wrap">
+			This page is HOME.
 		</div>
 	</article>
 	
-    <jsp:include page="./view/include/footer.jsp">
-	
-	
-	
-	
+	<jsp:include page="./view/include/footer.jsp" />
+
 </body>
 </html>
