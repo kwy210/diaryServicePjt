@@ -1,0 +1,24 @@
+# Eclipse workspace / IDE metadata
+# .project, .classpath, .settings는 Git에 포함
+.metadata/
+.recommenders/
+
+# Build / compiled output
+/build/
+/bin/
+/target/
+/out/
+*.class
+
+# Eclipse / Java temporary files
+*.log
+*.tmp
+*.swp
+.factorypath
+
+# Local application server
+/Servers/
+
+# Operating system files
+.DS_Store
+Thumbs.db

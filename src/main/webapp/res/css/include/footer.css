@@ -1,0 +1,11 @@
+footer {
+    width: 100%;
+}
+
+footer div.footer_wrap {
+    height: 300px;
+    line-height: ;
+    background-color: rgb(255 255 255 / .9);
+    color: ;
+    text-align: center;
+}

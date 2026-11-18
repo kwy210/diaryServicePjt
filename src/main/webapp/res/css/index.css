@@ -1,0 +1,9 @@
+article {
+	width: 1000px;
+	margin: 50px 500px;
+	
+}
+
+article div.article_wrap {
+	text-align:  center;
+}
