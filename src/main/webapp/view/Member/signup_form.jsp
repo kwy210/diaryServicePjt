@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<jsp:include page="../include/title.jsp">
+<jsp:include page="../include/title.jsp" />
 
 <link href="./res/css/index.css" rel="stylesheet" type="text/css">
 
@@ -12,9 +12,9 @@
 <body>
 	
 		
-	<jsp:include page="../include/header.jsp">
+	<jsp:include page="../include/header.jsp"/>
 	
-	<jsp:include page="../include/nav.jsp">
+	<jsp:include page="../include/nav.jsp"/>
 	
 	
 	
@@ -24,7 +24,7 @@
 		</div>
 	</article>
 	
-    <jsp:include page="../include/footer.jsp">
+    <jsp:include page="../include/footer.jsp"/>
 	
 	
 	

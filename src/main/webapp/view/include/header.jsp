@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-    <link href="./res/css/inclde/header.css" rel="stylesheet" type="text/css">
+    <link href="./res/css/include/header.css" rel="stylesheet" type="text/css">
     
     
 	<header>
