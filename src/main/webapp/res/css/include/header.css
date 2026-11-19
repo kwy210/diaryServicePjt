@@ -1,4 +1,4 @@
-header  {
+header {
 	width: 100%;
 }
 
@@ -7,5 +7,5 @@ header div.header_wrap {
 	height: 70px;
 	line-height: 70px;
 	border-bottom: 1px solid #ccc;
-	background-color: rgb(200, 200, .1);
+	background-color: rgba(200, 200, 200, .1);
 }

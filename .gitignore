@@ -1,24 +1,48 @@
-# Eclipse workspace / IDE metadata
-# .project, .classpath, .settings는 Git에 포함
-.metadata/
-.recommenders/
 
-# Build / compiled output
+# ========================================
+# Eclipse 프로젝트 설정 - Git에 포함
+# ========================================
+# .project
+# .classpath
+# .settings/
+
+# ========================================
+# Build 결과물 제외
+# ========================================
 /build/
 /bin/
 /target/
-/out/
+
+# ========================================
+# Eclipse 임시 파일 및 작업공간 설정
+# ========================================
+.metadata/
+.recommenders/
+.remoteSystemsTempFiles/
+*.tmp
+*.bak
+*.swp
+*~
+
+# ========================================
+# Java 컴파일 결과물
+# ========================================
 *.class
 
-# Eclipse / Java temporary files
+# ========================================
+# 로그 파일
+# ========================================
 *.log
-*.tmp
-*.swp
-.factorypath
 
-# Local application server
-/Servers/
-
-# Operating system files
+# ========================================
+# OS별 불필요한 파일
+# ========================================
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# ========================================
+# IDE 개인 설정
+# ========================================
+.idea/
+*.iml

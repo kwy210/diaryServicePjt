@@ -10,11 +10,10 @@ public class MemberDto {
 	private String memRegDate;
 	private String memModDate;
 	
-	public MemberDto() {}
+	public MemberDto() { }
 
-	public MemberDto(int memNo, String memId, String memPw, String memMail, String memPhone, String memRegDate,
-			String memModDate) {
-		super();
+	public MemberDto(int memNo, String memId, String memPw, 
+			String memMail, String memPhone, String memRegDate, String memModDate) {
 		this.memNo = memNo;
 		this.memId = memId;
 		this.memPw = memPw;
@@ -23,15 +22,13 @@ public class MemberDto {
 		this.memRegDate = memRegDate;
 		this.memModDate = memModDate;
 	}
-
-	public MemberDto(int memNo, String memId, String memPw, String memMail) {
-		super();
-		this.memNo = memNo;
+	
+	public MemberDto(String memId, String memPw, String memMail, String memPhone) {
 		this.memId = memId;
 		this.memPw = memPw;
 		this.memMail = memMail;
 		this.memPhone = memPhone;
-		
+
 	}
 
 	public int getMemNo() {
@@ -90,5 +87,4 @@ public class MemberDto {
 		this.memModDate = memModDate;
 	}
 
-	
 }

@@ -9,7 +9,7 @@ public class MemberDaoForOracle implements IMemberDao {
 	}
 
 	@Override
-	public int insertnewMember(MemberDto memberDto) {
+	public int insertNewMember(MemberDto memberDto) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
