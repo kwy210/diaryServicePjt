@@ -41,12 +41,21 @@ public class MemberController extends HttpServlet {
 			
 			if( resultForSignup > 0) {
 				nextPage = "view/member/signup_ok.jsp";
+				
+				
+				
 			} else {
 				nextPage = "view/member/signup_ng.jsp";
+				
 			}
 			
 			break;
 			
+		case "/signin_form.mem":
+			
+		nextPage = "view/member/signin_form.jsp";
+		
+			break;
 		}
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(nextPage);
