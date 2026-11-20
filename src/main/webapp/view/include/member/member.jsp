@@ -21,7 +21,7 @@
 		}
 		
 		function signinForm() {
-			console.log("signinForm()")
+			console.log("signinForm()!!")
 			
 			let form = document.signin_form;
 		if (form.memId.value === '') {

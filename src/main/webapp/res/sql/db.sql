@@ -40,3 +40,14 @@ select count(*) cnt from tbl_member where memId = 'gildong';
 delete from tbl_member;
 
 SET GLOBAL auto_increment_increment = 3; -- 전역변수로 하면 잘됨
+
+
+select 
+	* 
+from 
+	tbl_member 
+where 
+	memId = 'gildong';
+
+
+

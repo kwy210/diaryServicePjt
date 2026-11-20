@@ -22,7 +22,7 @@
 			
 			<form 
 				action="<%= request.getContextPath() %>/signup_confirm.mem" 
-				name="signup_form" 
+				name="signin_form" 
 				method="POST">
 				
 				*<input class="basic_input" type="text" name="memId" placeholder="Input new member ID!!">

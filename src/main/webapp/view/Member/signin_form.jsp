@@ -29,7 +29,7 @@
 				<br> 
 				*<input class="basic_input" type="password" name="memPw" placeholder="Input  member PW!!">
 				<br> 
-				<input class="basic_input_button" type="button" value="SIGN UP" onclick="signinForm();">
+				<input class="basic_input_button" type="button" value="SIGN IN" onclick="signinForm();">
 				<input class="basic_input_button" type="reset" value="RESET">
 			</form>
 			
