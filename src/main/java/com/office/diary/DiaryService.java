@@ -15,26 +15,30 @@ public class DiaryService {
 	}
 
 	public int writeNewDiary(HttpServletRequest request, HttpServletResponse response) {
-	
-		String diaryWord = request.getParameter("diaryword");
+		
+		String diaryWord = request.getParameter("diaryWord");
 		
 		HttpSession session = request.getSession();
-		String signedMemberId = String.valueOf(session.getAttribute("signedMemberId"));
+		String signinedMemberId = String.valueOf(session.getAttribute("signinedMemberId"));
 		
-		DiaryDto diaryDto = new DiaryDto(diaryWord, signedMemberId);
+		DiaryDto diaryDto = new DiaryDto(diaryWord, signinedMemberId);
 		
 		int result = diaryDao.insertNewDiary(diaryDto);
 		
-		
 		return result;
+		
 	}
 
-	public List<DiaryDto> getMyDiares(HttpServletRequest request, HttpServletResponse response) {
+	public List<DiaryDto> getMyDiaries(HttpServletRequest request, HttpServletResponse response) {
 		
 		String signInedMemberId = String.valueOf(request.getSession().getAttribute("signinedMemberId"));
-		List<DiaryDto> myDiaries = diaryDao.selectDiariesByMemId(signinedMemberId);
 		
-		return null;
+		List<DiaryDto> myDiaries = diaryDao.selectDiariesByMemId(signInedMemberId);
+		
+		request.setAttribute("myDiaries", myDiaries);
+		
+		return myDiaries;
+		
 	}
 	
 }

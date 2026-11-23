@@ -4,7 +4,7 @@ public class DiaryDto {
 
 	// only diary
 	private int diaryNo;
-	private String diaryword;
+	private String diaryWord;
 	private String diaryRegDate	;	
 	private String diaryModDate;
 	
@@ -25,14 +25,14 @@ public class DiaryDto {
 
 	public DiaryDto(int diaryNo, String diaryword, String memId, String diaryRegDate, String diaryModDate) {
 		this.diaryNo = diaryNo;
-		this.diaryword = diaryword;
+		this.diaryWord = diaryword;
 		this.memId = memId;
 		this.diaryRegDate = diaryRegDate;
 		this.diaryModDate = diaryModDate;
 	}
 	
-	public DiaryDto(String diaryword, String memId) {
-		this.diaryword = diaryword;
+	public DiaryDto(String diaryWord, String memId) {
+		this.diaryWord = diaryWord;
 		this.memId = memId;
 		
 	}
@@ -49,12 +49,12 @@ public class DiaryDto {
 
 
 	public String getDiaryword() {
-		return diaryword;
+		return diaryWord;
 	}
 
 
 	public void setDiaryword(String diaryword) {
-		this.diaryword = diaryword;
+		this.diaryWord = diaryword;
 	}
 
 
