@@ -67,7 +67,9 @@ public class MemberController extends HttpServlet {
 			if( signinedMemberDto != null) {
 				
 				HttpSession session = request.getSession();
+				
 				session.setAttribute("signinedMemberId", signinedMemberDto.getMemId());
+				
 				session.setMaxInactiveInterval(60 * 30);
 				
 				nextPage = generateView("signin_ok");
@@ -103,7 +105,7 @@ public class MemberController extends HttpServlet {
 
 	private String generateView(String viewName) {
 		
-		String view = "view/member/" + viewName + ".jsp";
+		String view = "/view/member/" + viewName + ".jsp";
 		
 		return view;
 	}

@@ -95,8 +95,7 @@ public class MemberDaoForMySQL implements IMemberDao {
 			conn = DriverManager.getConnection(URL, UESNAME, PASSWORD);
 
 			// 3. SQL 작성(작업 지시서)
-			String sql = "insert into" + "tbl_member(" + "memId, " + "memPw, " + "memMail, " + "memPhone) "
-					+ "values(?, ?, ?, ?)"; // ? = 스테이트 = 뭐가 올지 모르니깐 일단 비워둔다는 뜻
+			String sql = "insert into tbl_member(memId, memPw, memMail, memPhone) values(?, ?, ?, ?)"; // ? = 스테이트 = 뭐가 올지 모르니깐 일단 비워둔다는 뜻
 
 			// 4. 일꾼 선택(생성)
 			pstmt = conn.prepareStatement(sql);
@@ -153,7 +152,7 @@ public class MemberDaoForMySQL implements IMemberDao {
 			conn = DriverManager.getConnection(URL, UESNAME, PASSWORD);
 
 			// 3. SQL 작성(작업 지시서)
-			String sql = "select" + "*" + "from" + "tbl_member" + "where" + "memId = ?"; // ? = 스테이트 = 뭐가 올지 모르니깐 일단
+			String sql = "select * from tbl_member where memId = ?"; // ? = 스테이트 = 뭐가 올지 모르니깐 일단
 																							// 비워둔다는 뜻
 
 			// 4. 일꾼 선택(생성)

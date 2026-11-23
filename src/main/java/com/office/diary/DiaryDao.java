@@ -5,7 +5,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import com.office.member.MemberDto;
 
 public class DiaryDao {
 
@@ -14,7 +13,7 @@ public class DiaryDao {
 	final private String UESNAME = "root";
 	final private String PASSWORD = "1234";
 	
-	public int insertNewDiary(String diaryWrod) {
+	public int insertNewDiary(DiaryDto diaryDto) {
 		
 		int result = 0;
 		Connection conn = null;
@@ -28,17 +27,17 @@ public class DiaryDao {
 			conn = DriverManager.getConnection(URL, UESNAME, PASSWORD);
 
 			// 3. SQL 작성(작업 지시서)
-			String sql = "insert into tbl_diart(diaryword, memId) values(?,?)"; // ? = 스테이트 = 뭐가 올지 모르니깐 일단 비워둔다는 뜻
+			String sql = "insert into tbl_diary(diaryword, memId) values(?,?)"; // ? = 스테이트 = 뭐가 올지 모르니깐 일단 비워둔다는 뜻
 
 			// 4. 일꾼 선택(생성)
 			pstmt = conn.prepareStatement(sql);
 
 			// 5. 데이터 주입
-			pstmt.setString(1, diaryDto.getDiartWord());
-			pstmt.setString(2, diaryDto.getmemId());
+			pstmt.setString(1, diaryDto.getDiaryword());
+			pstmt.setString(2, diaryDto.getMemId());
 
 			// 6. 작업 지시
-			result = pstmt.executeUpdate(sql);
+			result = pstmt.executeUpdate();
 
 			/*
 			 * executeQuery() : select, 반환형(ResultSet) -> while문으로 사용하자 executeUpdate() :
@@ -60,11 +59,14 @@ public class DiaryDao {
 
 			} catch (Exception e2) {
 				e2.printStackTrace();
+			}
 
 			}
 			
 			return result;
 		}
 
+	
+	
 		
 	}

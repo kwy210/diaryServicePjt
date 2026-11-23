@@ -2,12 +2,21 @@ package com.office.diary;
 
 public class DiaryDto {
 
+	// only diary
 	private int diaryNo;
 	private String diaryword;
-	private String memId;
 	private String diaryRegDate	;	
 	private String diaryModDate;
-
+	
+	// only member
+	private int memNo;
+	private String memId;
+	private String memPw;
+	private String memMail;
+	private String memPhone;
+	private String memRegDate;
+	private String memModDate;
+	
 	
 	public DiaryDto() {
 		// TODO Auto-generated constructor stub
@@ -76,6 +85,66 @@ public class DiaryDto {
 
 	public void setDiaryModDate(String diaryModDate) {
 		this.diaryModDate = diaryModDate;
+	}
+
+
+	public int getMemNo() {
+		return memNo;
+	}
+
+
+	public void setMemNo(int memNo) {
+		this.memNo = memNo;
+	}
+
+
+	public String getMemPw() {
+		return memPw;
+	}
+
+
+	public void setMemPw(String memPw) {
+		this.memPw = memPw;
+	}
+
+
+	public String getMemMail() {
+		return memMail;
+	}
+
+
+	public void setMemMail(String memMail) {
+		this.memMail = memMail;
+	}
+
+
+	public String getMemPhone() {
+		return memPhone;
+	}
+
+
+	public void setMemPhone(String memPhone) {
+		this.memPhone = memPhone;
+	}
+
+
+	public String getMemRegDate() {
+		return memRegDate;
+	}
+
+
+	public void setMemRegDate(String memRegDate) {
+		this.memRegDate = memRegDate;
+	}
+
+
+	public String getMemModDate() {
+		return memModDate;
+	}
+
+
+	public void setMemModDate(String memModDate) {
+		this.memModDate = memModDate;
 	}
 	
 	

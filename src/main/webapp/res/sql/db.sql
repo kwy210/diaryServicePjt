@@ -15,6 +15,9 @@ create table tbl_member(
 	primary key(memNo)
 ) auto_increment = 1001;
 
+alter table tbl_member
+drop index memId;
+
 show tables;
 desc tbl_member;
 select * from tbl_member;
@@ -49,5 +52,9 @@ from
 where 
 	memId = 'gildong';
 
+-- table join
+select * from tbl_diary td
+join tbl_member tm
+on td.memId = tm.memId;
 
 

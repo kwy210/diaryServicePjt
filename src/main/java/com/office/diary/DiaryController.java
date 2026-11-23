@@ -7,14 +7,15 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 
 @WebServlet({ "/DiartController", "*.dir" })
-public class DiartController extends HttpServlet {
+public class DiaryController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
    
-    public DiartController() {
+    public DiaryController() {
         super();
        
     }
@@ -32,16 +33,30 @@ public class DiartController extends HttpServlet {
 		switch (command) {
 		case "/diary_write_form.dir": 
 			
-			nextPage = generateView("write_form.dir");
+			nextPage = generateView("write_form");
 			
 			break;
 			
-		case "write_confirm.dir" :
+		case "/write_confirm.dir" :
 			
 			diaryService = new DiaryService(new DiaryDao());
+			
 			int resultForWrite = diaryService.writeNewDiary(request,  response);
+			
+			if (resultForWrite > 0) {
+				nextPage = generateView("write_ok");
+			}else {
+				nextPage = generateView("write_ng");
+			}
+			
 			break;
 			
+		case "/diary_list.dir" :
+			
+			diaryService = new DiaryService(new DiaryDao());
+			List<DiaryDto> myDiaryes = diaryService.getMyDiares(request, response);
+			
+			break;
 		}
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(nextPage);
@@ -57,7 +72,7 @@ public class DiartController extends HttpServlet {
 
 		private String generateView(String viewName) {
 		
-			return "/view/member/" + viewName + ".jsp";
+			return "/view/diary/" + viewName + ".jsp";
 		
 		
 		
