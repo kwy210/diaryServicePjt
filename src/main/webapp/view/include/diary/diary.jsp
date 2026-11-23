@@ -1,45 +1,30 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <script>
-const writeForm = () => {
+    // ============================== [1] WRITE 버튼 함수 시작 ==============================
+    // write_form.jsp에서 WRITE 버튼을 클릭하면 이 함수가 호출됩니다.
+    const writeForm = () => {
 
-    console.log("DIARY.JS VERSION 2");
-    console.log("writeForm() 실행");
+        console.log("writeForm()");
 
-    // 1. write_form이라는 이름을 가진 form 검색
-    let form = document.querySelector('form[name="write_form"]');
+        // form의 name이 write_form이므로 document.write_form으로 form 객체를 가져옵니다.
+        let form = document.write_form;
 
-    console.log("form 객체:", form);
+        // form 안에 있는 diaryWord 입력값이 비어 있는지 확인합니다.
+        if (form.diaryWord.value === '') {
 
-    // 2. form이 존재하지 않는 경우
-    if (form === null) {
-        console.log("write_form을 찾을 수 없습니다.");
-        return;
+            // 입력값이 없으면 안내 메시지를 출력합니다.
+            alert("Please input diary!!");
+
+            // 입력창으로 커서를 이동시킵니다.
+            form.diaryWord.focus();
+
+        } else {
+
+            // 입력값이 있으면 form의 action 주소로 POST 요청을 전송합니다.
+            form.submit();
+
+        }
     }
-
-    // 3. form 내부에서 diaryword 입력창 검색
-    let diaryword = form.querySelector('[name="diaryword"]');
-
-    console.log("diaryword 객체:", diaryword);
-
-    // 4. 입력창이 존재하지 않는 경우
-    if (diaryword === null) {
-        console.log("diaryword 입력창을 찾을 수 없습니다.");
-        return;
-    }
-
-    // 5. 입력 내용 검사
-    if (diaryword.value.trim() === '') {
-
-        alert("일기 내용을 입력해 주세요.");
-        diaryword.focus();
-
-        return;
-
-    }
-
-    // 6. 입력 내용이 있으면 form 전송
-    form.submit();
-
-}
+    // ============================== [1] WRITE 버튼 함수 끝 ================================
 </script>
