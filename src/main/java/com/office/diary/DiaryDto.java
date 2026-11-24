@@ -2,15 +2,13 @@ package com.office.diary;
 
 public class DiaryDto {
 
-    // ============================== [1] 일기 데이터 필드 시작 ==============================
+    
     // 일기 테이블(tbl_diary)의 데이터를 보관하는 필드입니다.
     private int diaryNo;
     private String diaryWord;
     private String diaryRegDate;
     private String diaryModDate;
-    // ============================== [1] 일기 데이터 필드 끝 ================================
-
-    // ============================== [2] 회원 데이터 필드 시작 ==============================
+   
     // 일기를 작성한 회원의 정보를 보관하는 필드입니다.
     // 이번 일기 작성(INSERT)에서는 memId를 사용합니다.
     private int memNo;
@@ -20,14 +18,10 @@ public class DiaryDto {
     private String memPhone;
     private String memRegDate;
     private String memModDate;
-    // ============================== [2] 회원 데이터 필드 끝 ================================
-
-    // ============================== [3] 기본 생성자 시작 ==================================
+    
     // 매개변수 없이 DiaryDto 객체를 생성할 때 사용합니다.
     public DiaryDto() { }
-    // ============================== [3] 기본 생성자 끝 ====================================
-
-    // ============================== [4] 일기 조회용 생성자 시작 ============================
+    
     // 조회한 일기 정보를 객체 생성과 동시에 필드에 저장할 때 사용하는 생성자입니다.
     public DiaryDto(int diaryNo, String diaryWord, String memId, String diaryRegDate, String diaryModDate) {
         this.diaryNo = diaryNo;
@@ -36,18 +30,14 @@ public class DiaryDto {
         this.diaryRegDate = diaryRegDate;
         this.diaryModDate = diaryModDate;
     }
-    // ============================== [4] 일기 조회용 생성자 끝 ===============================
-
-    // ============================== [5] 일기 작성용 생성자 시작 ============================
+    
     // 새 일기를 저장할 때 필요한 일기 내용과 회원 ID를 전달받습니다.
     // DiaryService에서 new DiaryDto(diaryWord, signinedMemberId)로 호출합니다.
     public DiaryDto(String diaryWord, String memId) {
         this.diaryWord = diaryWord;
         this.memId = memId;
     }
-    // ============================== [5] 일기 작성용 생성자 끝 ===============================
-
-    // ============================== [6] Diary Getter / Setter 시작 ========================
+   
     // Getter: 다른 객체가 DTO 내부에 저장된 값을 가져갈 수 있게 합니다.
     // Setter: 다른 객체가 DTO 내부의 값을 변경할 수 있게 합니다.
     public int getDiaryNo() {
@@ -89,10 +79,7 @@ public class DiaryDto {
     public void setDiaryModDate(String diaryModDate) {
         this.diaryModDate = diaryModDate;
     }
-    // ============================== [6] Diary Getter / Setter 끝 ==========================
-
-    // ============================== [7] Member Getter / Setter 시작 =======================
-    // DiaryDto에 함께 선언된 회원 정보 필드의 Getter / Setter입니다.
+    
     public int getMemNo() {
         return memNo;
     }
@@ -140,5 +127,5 @@ public class DiaryDto {
     public void setMemModDate(String memModDate) {
         this.memModDate = memModDate;
     }
-    // ============================== [7] Member Getter / Setter 끝 =========================
+    
 }

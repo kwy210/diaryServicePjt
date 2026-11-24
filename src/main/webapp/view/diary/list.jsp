@@ -40,8 +40,8 @@
 						<th>memModDate</th>
 					</tr>
 				</thead>
-				<tbody>
-				<%
+				<tbody>							<!-- List 로 형변환 -->
+				<%								
 					List<DiaryDto> myDiaries = (List<DiaryDto>) request.getAttribute("myDiaries");
 					for (int i = 0; i < myDiaries.size(); i++) {
 				%>

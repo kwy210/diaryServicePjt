@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <script>
-    // ============================== [1] WRITE 버튼 함수 시작 ==============================
+    
     // write_form.jsp에서 WRITE 버튼을 클릭하면 이 함수가 호출됩니다.
     const writeForm = () => {
 
@@ -26,5 +26,5 @@
 
         }
     }
-    // ============================== [1] WRITE 버튼 함수 끝 ================================
+    
 </script>
